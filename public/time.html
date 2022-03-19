@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<base href="/">
+		<link rel="stylesheet" href="css/style.css" />
+		  <!--Favicon-->
+		  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		  <link rel="manifest" href="favicon/site.webmanifest">
+		  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+		  <meta name="msapplication-TileColor" content="#da532c">
+		  <meta name="theme-color" content="#ffffff">
+		<title>Timestamps</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/" class="nav">Return Home</a>
+		</nav>
+		<div class="t-container">
+			<div class="time-text">	
+				<h1>Timestamp section</h1>
+				<p>Put a time stamp into the form below and see it in both unix and UTC format</p>
+			</div>
+            <form action="" id="time-form">
+                <div class="form-control time-c">
+                    <label for="date">Your Date:</label>
+                    <input
+                        type="text"
+                        name="date"
+                        id="date"
+                        placeholder="YYYY/MM/DD"
+                    />
+                </div>
+				<div class="buttons">
+					<button type="submit" id="submit" class="btn">Render on page</button>
+					<button type="submit" id="render" class="btn">Redirect to JSON object</button>
+				</div>
+			</form>
+
+			<div class="answer-field">
+                <h1 class="Answer">Answer:</h1>
+                <p class=" " id="answer-field">Awaiting Input...</p>
+
+            </div>
+
+
+		</div>
+	<script src="js/renderTime.js"></script>
+	</body>
+</html>

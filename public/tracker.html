@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FCC Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+    <base href="/">
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body>
+    <nav class="posts-nav">
+        <a href="/" class="nav">Return Home</a>
+    </nav>
+    <div class="container">
+      
+        <h1 class="h1-post">Exercise tracker</h1>
+      <form action="/fcc/api/users" method="post" class="form-styling">
+        <h3 class="fw-bold">Create a New User</h3>
+        <p><code>POST /api/users</code></p>
+        <input id="uname" type="text" name="username" placeholder="username" class="form-control" required/>
+        <input type="submit" value="Submit" class="submit-button-post" />
+      </form>
+      
+      <form id="exercise-form" method="post" action="/fcc/api/users/:_id/exercises" class="form-styling">
+        <h3 class="fw-bold">Add exercises</h3>
+        <p><code>POST /fcc/api/users/:_id/exercises</code></p>
+        <input id="uid" type="text" name=":_id" placeholder=":_id" class="form-control exercise-input" required/>
+        <input id="desc" type="text" name="description" placeholder="description*" class="form-control exercise-input" required/>
+        <input id="dur" type="text" name="duration" placeholder="duration* (mins.)" class="form-control exercise-input" required/>
+        <input id="date" type="text" name="date" placeholder="date (yyyy-mm-dd)" class="form-control" required/>
+        <input type="submit" value="Submit" class="submit-button-post" />
+      </form>
+      
+      
+      <div class="info-section" id="info-db-section">
+        <p>
+            <strong>GET user's exercise log: <br> </strong>
+            <code class="code-ex">GET /api/users/:_id/logs?[from][&amp;to][&amp;limit]</code>
+        </p>
+        <p><strong>[ ]</strong> = optional</p>
+        <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+      </div>
+    </div>
+    
+    
+    <script>
+      const exerciseForm = document.getElementById("exercise-form");
+
+      exerciseForm.addEventListener("submit", () => {
+        const userId = document.getElementById("uid").value;
+        exerciseForm.action = `/fcc/api/users/${userId}/exercises`;
+
+        exerciseForm.submit();
+      });
+    </script>
+  </body>
+</html>

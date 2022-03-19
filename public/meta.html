@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <base href="/">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>FCC Projects</title>
+</head>
+<body>
+    <nav class="posts-nav">
+        <a href="/" class="nav">Return Home</a>
+    </nav>
+
+    <div class="container">
+        
+        <h2 class="h1-post">API Project: File Metadata Microservice</h2>
+
+        <h3 class="h5-post">Usage:</h3>
+        <p class="h5-post">
+          Please Upload a File ...
+        </p>
+        <div class="view">
+          <h4 id="output"></h4>
+            
+            <form enctype="multipart/form-data" method="POST" action="fcc/meta/api/fileanalyse" class="form-styling">
+              
+                <input id="file-inputfield" type="file" name="upfile" class="file-upload">
+                
+                <button class="submit-button-post">Upload</button>
+            
+            </form>
+
+            <div class="info-section" id="info-db-section">
+                <h3>Disclaimer</h3>
+                <p>For Safety Reasons:</p>
+                <ul >
+                    <li>The maximum file size is capped at 1kb or 1000 bytes</li>
+                    <li class="list-item-info">To test this without any constraints visit my repl of this project</li>
+                    <li class="list-item-info">You can find its link <a href="https://boilerplate-project-filemetadata-1.thatlukaszguy.repl.co/" target="_blank">here</a></li>
+                    <li class="list-item-info">First however run the repl itself  <a href="https://replit.com/@ThatLukaszGuy/boilerplate-project-filemetadata-1?v=1" target="_blank">here</a></li>
+                </ul>
+    
+            </div>
+    </div>
+    
+    <script src="js/fileCheck.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
