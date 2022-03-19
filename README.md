@@ -10,7 +10,7 @@
     A little app showcasing of what is possible in an express/node app
     <br/>
     <br/>
-    <a href="https://nodemagic.herokuapp.com/">View Demo</a>
+    <a href="https://nodemagic.herokuapp.com/" target="_blank">View Demo</a>
     .
   </p>
 </p>
