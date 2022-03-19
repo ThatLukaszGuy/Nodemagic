@@ -35,7 +35,8 @@
 This site is a little app build in node js on the express framework.
 
 It shows on a very basic level many of the possibilities of what u can do in node js on the back end.
-A lot of different technologies were used here: Node, Express and even Websockets and WebRTC
+A lot of different technologies were used here: Node, Express and even Websockets and WebRTC.
+This page also features a completed and sometimes slightly altered version of all back-end-api projects for FreeCodeCamp.
 
 
 ## Built With
