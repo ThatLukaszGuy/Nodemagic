@@ -35,7 +35,7 @@ router.get('/header-parser', (req,res) => {
 const Url = require('../models/urlModel.js');
 
 router.get('/url-shortener' , (req, res) => {
-    res.sendFile('url.html', {root: 'public'})
+    res.render('url')
 })
 
 router.post('/url-shortener/api/shorturl', (req,res) => {
