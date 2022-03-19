@@ -55,25 +55,23 @@ You will need a package manager (e.g: npm or yarn)
 
 ### Installation
 
-1. Clone Repo
+1. Clone the repo
 
-2. Clone the repo
-
-3. Install NPM packages
+2. Install NPM packages
 
     ```sh
      npm i
      ```
 
-4. Create .env file
+3. Create .env file
 
-5. Create your own mongoDB atlas database
+4. Create your own mongoDB atlas database
 
-6. Import it in your project
+5. Import it in your project
 
-7. Hide DB_USERNAME and DB_PASSWORD in env file along with the Port
+6. Hide DB_USERNAME and DB_PASSWORD in env file along with the Port
 
-8. Run it locally with ``` npm start```
+7. Run it locally with ``` npm start```
 
 
 
