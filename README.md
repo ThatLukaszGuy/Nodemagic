@@ -38,6 +38,8 @@ It shows on a very basic level many of the possibilities of what u can do in nod
 A lot of different technologies were used here: Node, Express and even Websockets and WebRTC.
 This page also features a completed and sometimes slightly altered version of all back-end-api projects for FreeCodeCamp.
 
+Not fully functional on mobile devices
+
 
 ## Built With
 
