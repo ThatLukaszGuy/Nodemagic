@@ -1,8 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/ThatLukaszGuy/Nodemagic">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+
 
   <h3 align="center">Nodemagic</h3>
 
@@ -10,7 +8,7 @@
     A little app showcasing of what is possible in an express/node app
     <br/>
     <br/>
-    <a href="https://nodemagic.herokuapp.com/" target="_blank" rel="noopener">View Demo</a>
+    <a href="https://nodemagic.herokuapp.com/" target="_blank" rel="noopener">View Page</a>
     .
   </p>
 </p>

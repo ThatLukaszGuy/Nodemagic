@@ -3,9 +3,9 @@ function leaveAlert() {
         title:" You're about to leave this session ",
         html:"Are u sure?",
         icon:'question',
-        confirmButtonColor: 'rgba(240, 128, 128, 1)',
+        confirmButtonColor: '#a18883',
         showCancelButton: true,
-        cancelButtonColor: 'rgba(240, 128, 128, 1)',
+        cancelButtonColor: '#a18883',
         showClass: {
            popup: 'animate__animated animate__fadeInDown'
          },
@@ -13,7 +13,7 @@ function leaveAlert() {
            popup: 'animate__animated animate__fadeOutUp'
          },
         backdrop: `
-            rgba(240, 128, 128, 0.4)`,
+        rgba(239, 200, 177, 0.6)`,
          heightAuto:'false',
          confirmButtonText: 'Yes !',
          cancelButtonText: 'No, go back !',
@@ -34,9 +34,9 @@ function homeAlert() {
         title:" You're about to leave this session and return home ",
         html:"Are u sure?",
         icon:'question',
-        confirmButtonColor: 'rgba(240, 128, 128, 1)',
+        confirmButtonColor: '#a18883',
         showCancelButton: true,
-        cancelButtonColor: 'rgba(240, 128, 128, 1)',
+        cancelButtonColor: '#a18883',
         showClass: {
            popup: 'animate__animated animate__fadeInDown'
          },
@@ -44,7 +44,7 @@ function homeAlert() {
            popup: 'animate__animated animate__fadeOutUp'
          },
         backdrop: `
-            rgba(240, 128, 128, 0.4)`,
+        rgba(239, 200, 177, 0.6)`,
          heightAuto:'false',
          confirmButtonText: 'Yes !',
          cancelButtonText: 'No, go back !',

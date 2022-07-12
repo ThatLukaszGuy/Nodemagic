@@ -6,7 +6,7 @@ const path = require('path');
 router.use(express.static(path.join(__dirname, 'public')));
 
 router.get('/', (req,res) => {
-    res.sendFile('time.html', {root: 'public'})
+    res.render('time')
 });
 
 router.get('/:date?', (req ,res) => {

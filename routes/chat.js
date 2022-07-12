@@ -5,11 +5,11 @@ const path = require('path');
 router.use(express.static(path.join(__dirname, 'public')));
 
 router.get('/', (req,res) => {
-    res.sendFile('join.html', {root: 'public'})
+    res.render('join')
 });
 
 router.get('/chat', (req,res) => {
-    res.sendFile('chat.html', {root: 'public'})
+    res.render('chat')
 });
 
 

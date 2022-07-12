@@ -16,7 +16,7 @@ mongoose.connect(connectionURI)
 router.use(express.static(path.join(__dirname, 'public')));
 
 router.get('/', (req,res) => {
-    res.sendFile('fcc.html', {root: 'public'})
+    res.render('fcc')
 });
 
 //header parser
@@ -72,7 +72,7 @@ router.get('/url-shortener/api/shorturl/:id', (req,res) => {
 //exercise tracker
 
 router.get('/tracker' , (req, res) => {
-  res.sendFile('tracker.html', {root: 'public'})
+  res.render('tracker')
 })
 
 //schemas
@@ -193,7 +193,7 @@ const multer = require('multer')
 const upload  = multer({ dest: "uploads/"})
 
 router.get('/meta' , (req, res) => {
-    res.sendFile('meta.html', {root: 'public'})
+    res.render('meta')
 })
 
 

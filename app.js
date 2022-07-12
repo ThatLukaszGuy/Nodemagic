@@ -21,7 +21,6 @@ const chatAppRoutes = require('./routes/chat');
 const videoAppRoutes = require('./routes/video')
 const basicRoutes = require('./routes/basic');
 const timeRoute = require('./routes/time');
-const fetchRoute = require('./routes/fetch');
 const dbRoute = require('./routes/DB');
 const fccRoute = require('./routes/fcc');
 
@@ -30,7 +29,6 @@ const fccRoute = require('./routes/fcc');
 app.use('/chatapp', chatAppRoutes);
 app.use('/basic', basicRoutes);
 app.use('/time', timeRoute);
-app.use('/fetching', fetchRoute);
 app.use('/DB', dbRoute);
 app.use('/fcc',fccRoute)
 app.use('/video', videoAppRoutes)
@@ -38,6 +36,12 @@ app.use('/video', videoAppRoutes)
 app.get('/:room', (req, res) => {
     res.render('room', { roomId: req.params.room })
 })
+
+app.get('/' , (req,res) => {
+    res.render('index')
+})
+
+
 // CORS
 const cors = require('cors');
 app.use(cors({optionsSuccessStatus: 200}))

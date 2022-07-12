@@ -10,16 +10,10 @@
 			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
 			crossorigin="anonymous"
 		/>
+	
 		<base href="/">
 		<link rel="stylesheet" href="css/style.css" />
-		  <!--Favicon-->
-		  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-		  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-		  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-		  <link rel="manifest" href="favicon/site.webmanifest">
-		  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-		  <meta name="msapplication-TileColor" content="#da532c">
-		  <meta name="theme-color" content="#ffffff">
+		<%- include('./partials/favicon.ejs') %>
 		<title>WebChat</title>
 	</head>
 	<body>
@@ -43,18 +37,19 @@
 							required
 						/>
 					</div>
-					<div class="form-control">
+					<div class="form-control buttonIn">
 						<label for="room">Room</label>
-						<select name="room" id="room">
-							<option value="First Room">First Room</option>
-							<option value="Second Room">Second Room</option>
-							<option value="Third Room">Third Room</option>
-							<option value="Fourth Room">Fourth Room</option>
-						</select>
+						<div class="input-group">
+							<input required class="form-control" type="text" name="room" id="room" placeholder="Enter room name or generate a new one"> 
+							<span class="form-btn" id="new">new</span>
+						</div>
 					</div>
+
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
 			</main>
 		</div>
+
+		<script src="js/join.js"></script>
 	</body>
 </html>

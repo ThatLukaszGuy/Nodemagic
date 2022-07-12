@@ -5,7 +5,7 @@ const path = require('path');
 router.use(express.static(path.join(__dirname, 'public')));
 
 router.get('/', (req,res) => {
-    res.sendFile('base.html', {root: 'public'})
+    res.render('base')
 });
 
 

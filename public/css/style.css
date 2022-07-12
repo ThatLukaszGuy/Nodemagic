@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #f08080;
+	--dark-color-a: #514644;
 	/*
 	--dark-color-a: #667aff;
 	*/
-	--dark-color-b:	#f5a6a6;
+	--dark-color-b:	#a18883;
 
-	--light-color:	#fbd9d9;
+	--light-color:	#efc8b1;
 
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
@@ -257,6 +257,31 @@ nav a {
 	color:  white;
 	transition: color 0.2s;
 }
+
+
+.buttonIn {
+
+	position: relative;
+}
+
+.form-btn {
+	position: absolute;
+
+	border-radius: 5px;
+	right: 10px;
+	z-index: 2;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	border: none;
+	top: 30px;
+	height: 30px;
+	cursor: pointer;
+	color: white;
+	background-color: var(--dark-color-a);
+
+}
+
 
 /*timestamp*/
 
