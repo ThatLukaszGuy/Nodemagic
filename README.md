@@ -28,7 +28,7 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](images/screenshot_new.png)
 
 This site is a little app build in node js on the express framework.
 
