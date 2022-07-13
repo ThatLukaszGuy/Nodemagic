@@ -367,88 +367,7 @@ nav a {
 	margin-bottom: 10px;
 }
 
-/*weather app*/
-.weather-body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: calc(100vh - 59px);
-}
 
-
-.card{  
-
-	background: white;  
-	color: var(--dark-color-a);  
-	padding: 1.5rem;  
-	border-radius: 30px;  
-	width: 100%;  
-	max-width: 420px;  
-	margin: 1rem;  
-  }  
-  .search{  
-	display: flex;  
-	align-items: center;  
-	justify-content: center;  
-  }  
-  .search button{  
-	margin: 1rem;  
-	border-radius: 50%;  
-	border: none;  
-	height: 2.5rem;  
-	width: 2.5rem;  
-	outline: none;  
-	background-color: var(--dark-color-b);  
-	color: white;  
-	font-weight: bold;
-  }  
-  .search button:hover{  
-	background-color: var(--dark-color-b);  
-	cursor: pointer;  
-	transition: 0.2s ease-in-out;  
-  }  
-  input.search-bar {  
-	border: none;  
-	outline: none;  
-	padding: 1rem 1rem;  
-	border-radius: 50px;  
-	width: 15rem;  
-	height: 2.5rem;  
-	background-color:  var(--dark-color-b);  
-	color: white;  
-	font-family: inherit;  
-	font-size: 100%;  
-  }  
-  .description{  
-	text-transform: capitalize;  
-  }    
-
-  .search-bar::placeholder {
-	  color: white;
-  }
-
-  .loading{  
-	visibility: hidden;  
-	text-align: center;
-  }  
-  .loading::after{  
-	text-align: center;
-	visibility: visible;  
-	content: "Awaiting Input...";  
-	color: var(--dark-color-a);  
-  }  
-
-.weather-header {
-	color: var(--dark-color-a);
-}
-
-.w-disclaimer {
-	background-color: var(--dark-color-a);
-	color: white;
-	padding: 10px;
-	border-radius: 5px;
-}
 
 /*form for db*/
 
@@ -533,6 +452,52 @@ nav a {
 .list-item-info a {
 	color: var(--dark-color-b);
 }
+
+/* Style the tab */
+.tab {
+
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+	border: none;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	background-color: var(--dark-color-a);
+	color: white;
+	font-weight: bold;
+  }
+  
+  /* Change background color of buttons on hover */
+
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+	background-color: var(--dark-color-b);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+	display: none;
+	-webkit-animation: fadeEffect 1s;
+	animation: fadeEffect 1s;
+  }
+  
+  /* Fade in tabs */
+  @-webkit-keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
+  
+  @keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
+
 
 /*file metadata*/
 input[type=file]::file-selector-button {

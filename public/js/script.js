@@ -8,6 +8,13 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
+function copyLink() {
+  navigator.clipboard.writeText(room);
+  copyAlert()
+}
+
+
+
 const socket = io();
 
 // Join chatroom
@@ -88,3 +95,31 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   } else {
   }
 });
+
+
+// room copied
+function copyAlert() {
+  const url = room;
+
+  Swal.fire({
+      title:"Text Copied to Clipboard!",
+      confirmButtonColor: '#a18883',
+      html: `You can also copy it manually here: <br> <div class="url-alert">${url}</div>`,
+      showClass: {
+         popup: 'animate__animated animate__fadeInDown'
+       },
+       hideClass: {
+         popup: 'animate__animated animate__fadeOutUp'
+       },
+      backdrop: `
+      rgba(239, 200, 177, 0.6)`,
+       heightAuto:'false',
+       confirmButtonText: 'Ok',
+       cancelButtonText: 'No, go back !',
+       allowOutsideClick: false ,
+       allowEscapeKey:false,
+       allowEnterKey:false,
+       keydownListenerCapture:true,
+
+  })
+}

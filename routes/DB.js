@@ -8,6 +8,12 @@ require('dotenv').config()
 const connectionURI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.lvu1w.mongodb.net/Cluster0?retryWrites=true&w=majority`;
 mongoose.connect(connectionURI)
 
+// to enable patch & delete requests
+const methodOverride = require("method-override");
+router.use(methodOverride("_method", {
+  methods: ["POST", "GET"]
+}));
+
 //styling
 router.use(express.static(path.join(__dirname, 'public')));
 
@@ -40,5 +46,22 @@ router.post('/data' , (req, res) => {
     res.redirect('/DB')
 })
 
+router.patch('/data/update', (req,res) => {
+    const { id } = req.body
+    Posts
+        .findByIdAndUpdate(id, req.body, { new : true})
+        .then(() => console.log('Patched'))
+    res.redirect('/DB')
+})
+
+router.delete('/data/delete' , (req,res) => {
+    const { id } = req.body
+    Posts
+        .deleteMany({_id: id})
+        .then((data) => {
+            res.redirect('/DB')
+        })
+        .then(() => console.log('Deleted !'))
+})
 
 module.exports = router;
