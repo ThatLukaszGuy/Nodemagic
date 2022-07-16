@@ -28,7 +28,7 @@
 			<main class="join-main">
 				<form action="/chatapp/chat">
 					<div class="form-control">
-						<label for="username">Username</label>
+						<label for="username">Username <span style="color: gainsboro;">(min. 3 chars)</span></label>
 						<input
 							type="text"
 							name="username"
@@ -40,12 +40,12 @@
 					<div class="form-control buttonIn">
 						<label for="room">Room</label>
 						<div class="input-group">
-							<input required class="form-control" type="text" name="room" id="room" placeholder="Enter room name or generate a new one"> 
-							<span class="form-btn" id="new">new</span>
+							<input required class="form-control" type="text" name="room" id="room" placeholder="Enter existing roomId or generate a new one..."> 
+							<span class="form-btn hover-btn-dark" id="new">new</span>
 						</div>
 					</div>
 
-					<button type="submit" class="btn">Join Chat</button>
+					<button type="submit" class="btn hover-btn">Join Chat</button>
 				</form>
 			</main>
 		</div>

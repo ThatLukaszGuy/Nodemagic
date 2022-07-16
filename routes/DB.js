@@ -26,7 +26,7 @@ router.get('/', (req,res) => {
 
 });
 
-
+// get raw json
 router.get('/data' , (req,res) => {
     Posts.find((err, data) => {
         if (err) {
@@ -37,6 +37,16 @@ router.get('/data' , (req,res) => {
     })
 })
 
+// get raw json by id
+router.get('/data/:id' , (req,res) => {
+    const { id } = req.params
+    Posts.findById(id)
+        .then((post) => res.status(200).json(post))
+        .catch((err) => res.status(500).send(`We couldn't find the specified id , Error: ${err}`))
+})
+
+
+// post form
 router.post('/data' , (req, res) => {
     const newPost = new Posts({
         user: req.body.user,
@@ -46,6 +56,7 @@ router.post('/data' , (req, res) => {
     res.redirect('/DB')
 })
 
+// update form
 router.patch('/data/update', (req,res) => {
     const { id } = req.body
     Posts
@@ -54,6 +65,8 @@ router.patch('/data/update', (req,res) => {
     res.redirect('/DB')
 })
 
+
+// delete form
 router.delete('/data/delete' , (req,res) => {
     const { id } = req.body
     Posts

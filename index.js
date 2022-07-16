@@ -7,6 +7,8 @@ const http = require('http');
 //create port
 const port = process.env.PORT || 3030;
 
+// todo
+// add mute and mut video btn in videochat
 
 //importing all Logic needed for specific app
 const ChatAppLogic = require('./handlers/chat_app/chatHandler');

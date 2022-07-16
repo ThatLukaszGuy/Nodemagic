@@ -9,18 +9,25 @@ let { username, room } = Qs.parse(location.search, {
 });
 
 room = room.trim()
+username = username.trim()
 
 function copyLink() {
   navigator.clipboard.writeText(room);
   copyAlert()
 }
 
+if (username.split("").length <= 3 || room.length < 36) {
+  alert('Username should be longer than 3 characters and the roomID has to be in uuid4 format')
+  window.location.href = '/chatapp'
+}
 
 
 const socket = io();
 
 // Join chatroom
 socket.emit('joinRoom', { username, room });
+
+
 
 // Get room and users
 socket.on('roomUsers', ({ room, users }) => {
@@ -77,6 +84,7 @@ function outputMessage(message) {
 // Add room name to DOM
 function outputRoomName(room) {
   roomName.innerText = room;
+
 }
 
 // Add users to DOM

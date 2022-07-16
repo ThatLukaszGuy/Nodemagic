@@ -64,6 +64,14 @@ nav a {
 	font-size: 17px;
 }
 
+/* for all lighter hover btns */
+.hover-btn:hover {
+	background-color: #cfad99;
+}
+.hover-btn-dark:hover {
+	background-color: #3a312f
+}
+
 /* Chat Page */
 
 .chat-container {
@@ -280,6 +288,17 @@ nav a {
 	color: white;
 	background-color: var(--dark-color-a);
 
+}
+.raw-btn {
+	background-color: var(--dark-color-a);
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+}
+
+.raw-btn:hover {
+	background-color: #3a312f;
 }
 
 
@@ -545,6 +564,46 @@ input[type=file]::file-selector-button:hover {
 
 }
 
+.toggle-btn {
+	background-color: white;
+	border: none;
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+	padding-left: 16px;
+	padding-right: 16px;
+
+}
+
+.toggle-btn:hover {
+	background-color: rgb(230, 230, 230);
+	transition: background-color 0.2s;
+}
+
+.disc-btn {
+	background-color: var(--error-color);
+	border: none;
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.disc-btn:hover {
+	background-color: #b64844;
+	transition: background-color 0.2s;
+}
+
+
+.bar {
+	position: absolute;
+	top: 300px;
+	left: calc(50px + 15px)
+}
+
 /*exercise tracker*/
 
 .exercise-input {
@@ -578,6 +637,14 @@ input[type=file]::file-selector-button:hover {
 	.chat-sidebar {
 		display: none;
 	}
+
+	.chat-header {
+		flex-direction: column;
+	}
+
+	.chat-header h1 {
+		margin-bottom: 10px;
+	}
 	/*time*/
 
 
@@ -599,5 +666,9 @@ input[type=file]::file-selector-button:hover {
 		display: flex;
 		flex-direction: column!important;
 		height: 20vh!important;
+	}
+
+	.bar {
+		top: calc(20vh + 250px);
 	}
 }

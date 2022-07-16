@@ -23,7 +23,7 @@
         
         <h1 class="h1-post">Post something!</h1>
         <h5 class="h5-post">Just fill out the form, click the button and wait for your post to show up!</h5>
-        <h6 class="h6-post">See <a href="/DB/#info-db-section">below</a> for more info || PS: Sometimes you'll have to <a href="/DB"> reload </a> see your post.</h6>
+        <h6 class="h6-post">See <a href="/DB/#info-db-section">below</a> for more info || PS: Sometimes you'll have to <a href="/DB"> reload </a> see your post. Btw you can alter and delete anyone's post as you like.</h6>
 
         <div class="tab mt-5 mb-3">
             <button class="tablinks" onclick="openTab(event, 'Post')">Post</button>
@@ -70,7 +70,7 @@
               <label for="id" class="form-label">Id</label>
               <input type="text"  id="id" name="id" required class="form-control">
               
-              <button class="submit-button-post">Update !</button>
+              <button class="submit-button-post">Delete !</button>
             </form>
           </div>
           
@@ -84,9 +84,12 @@
             <% posts.forEach((post) => { %>
                 
                 <div class="post">
+                  <div class="d-flex justify-content-between">  
                     <h4 class="username">User : <%= post.user %></h4>
-                    <h6 class="" style="font-size: 0.9rem; color: gainsboro;">Id: <%= post._id %> </h6>
-                    <p class="content"><%= post.content %></p>
+                    <button class="raw-btn" onclick="window.location.href = '/DB/data/<%= post._id %>' " >Raw</button>
+                  </div>
+                  <h6 class="" style="font-size: 0.9rem; color: gainsboro;">Id: <%= post._id %> </h6>
+                  <p class="content"><%= post.content %></p>
                 </div>
             
             <% }) %>
