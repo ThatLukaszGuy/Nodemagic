@@ -8,7 +8,7 @@
     A little app showcasing of what is possible in an express/node app
     <br/>
     <br/>
-    <a href="https://nodemagic.herokuapp.com/" target="_blank" rel="noopener">View Page</a>
+    <a href="https://nodemagic.onrender.com/" target="_blank" rel="noopener">View Page</a>
     .
   </p>
 </p>
